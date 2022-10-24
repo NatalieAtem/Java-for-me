@@ -1,0 +1,76 @@
+1. CREATE TABLE Customers
+(
+    Id INT,
+    LastName TEXT,
+    Phone VARCHAR(20)
+)
+
+CREATE TABLE Orders
+(
+    Id INT,
+    Amount INT,
+	Date DATETIME
+)
+
+CREATE TABLE Managers
+(
+    Id INT,
+    LastName TEXT
+)
+
+
+2. INSERT INTO Customers (Id, LastName, Phone) VALUES (1, 'Ivanov', 11111111111), (2, 'Novak', 22222222222), (3, 'Repin', 33333333333)
+
+INSERT into Orders (Id, Amount, Date) VALUES (1, 11, 2022-10-11), (2, 12, 2022-10-12), (3, 13, 2022-10-13)
+
+INSERT INTO Managers (Id, LastName) VALUES (1, 'Simonova'), (2, 'Sidorov'), (3, 'Smirnova')
+ 
+			 
+3. UPDATE Orders
+SET Amount = 33
+WHERE Amount = 13
+
+4. DELETE FROM Managers 
+WHERE Id = 1
+
+5. DELETE FROM Managers
+
+6. 
+
+SELECT * FROM Orders
+WHERE Amount
+BETWEEN 10 AND 12;
+
+select * from Customers
+where Id IN (1, 3)
+
+SELECT LastName
+FROM Managers
+WHERE LastName LIKE 'S%'
+
+7. SELECT Customers.*, Managers.*, Orders.*
+FROM   Customers CROSS JOIN
+             Managers CROSS JOIN
+             Orders
+ORDER BY Date DESC
+
+8.
+SELECT Id FROM Customers
+UNION ALL
+SELECT Id FROM Managers
+UNION ALL
+SELECT Id FROM Orders
+ORDER BY Id ASC
+
+SELECT LastName FROM Customers
+UNION ALL
+SELECT LastName FROM Managers
+
+9.
+SELECT COUNT(Id), Date
+FROM Orders
+GROUP BY Date
+
+SELECT SUM(Amount)
+FROM Orders
+
