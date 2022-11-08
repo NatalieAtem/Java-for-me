@@ -1,0 +1,13 @@
+public abstract class Herbivores extends Animals {
+    String nickname;//null
+    Boolean pairHoof;//null
+
+    protected Herbivores (String name, int age, String nickname, Boolean pairHoof) {
+        super(name, age);
+        this.nickname = nickname;
+        this.pairHoof = pairHoof;
+    }
+
+    protected Herbivores () {
+    }
+}
