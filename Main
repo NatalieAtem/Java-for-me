@@ -1,0 +1,21 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Animals animal1 = new Cow();
+        Horse animal2 = new Horse();
+        animal1.say();
+        animal2.say();
+        animal1.say("test");
+        animal2.say("test");
+        Horse horse = new Horse();
+        horse.setSpeed(5.0d);
+        horse.printSpeed();
+        ((Horse) animal2).setSpeed(4.0d);
+        ((Horse) animal2).printSpeed();
+        System.out.println("count: " + horse.getCount());
+        Cow cow = new Cow("Pinzgauer", 2, "Murka", true);
+        System.out.println("All fields: " + cow);
+        System.out.println("All fields: " + horse);
+    }
+}
