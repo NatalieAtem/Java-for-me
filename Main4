@@ -1,0 +1,19 @@
+public class Main {
+    static Scanner scanner = new Scanner(System.in);
+    private static final String PREPARED_FILE_NAME = "test.txt";
+    private static List<Cow> cows = new ArrayList<>();
+
+    public static void main(String[] args) throws Exception { //method
+        menu();
+        String email = "natalie@mail.ru";
+        String invalidEmail1 = "at@mail.ru";
+        String invalidEmail2 = "natalie-mailru";
+
+        String pattern = "[a-zA-Z_0-9]{3,10}@(mail|gmail)\\.(ru|com)";
+
+        System.out.println(email.matches(pattern));
+        System.out.println(invalidEmail1.matches(pattern));
+        System.out.println(invalidEmail2.matches(pattern));
+    }
+
+    static void menu() throws Exception {
