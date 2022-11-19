@@ -15,5 +15,28 @@ public class Main {
         System.out.println(invalidEmail1.matches(pattern));
         System.out.println(invalidEmail2.matches(pattern));
     }
+    void phoneTest() {
+        String phone = "+7(967)46-57-57";
+
+        String pattern = "\\+[0-9]{1}\\([0-9]{3}\\)[0-9]{2}-[0-9]{2}-[0-9]{2}";
+
+        System.out.println(phone.matches(pattern));
+    }
+
+    void bookTest() {
+        String book = "978-3-16-148410-0";
+
+        String pattern = "\\+[0-9]{3}\\([0-9]{1}\\)[0-9]{2}-[0-9]{6}-[0-9]{1}";
+
+        System.out.println(book.matches(pattern));
+    }
+     
+    void dateTest() {
+        String date = "2022-oct-17";
+
+        String pattern = "\\(19|20)\d\d\\[a-zA-Z_0-9]\\(19|20)\d\d|(19|20)\d\d|3[01]"
+
+        System.out.println(date.matches(pattern));
+    }
 
     static void menu() throws Exception {
