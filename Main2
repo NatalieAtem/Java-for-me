@@ -1,15 +1,10 @@
 import java.util.Scanner;
 
 public class Main {
-    // keywords public, static, class, void
-    //main - mame or identifier
-    //all inside // - comment
-    /*
-    multiline comments
-     */
+   
     public static void main(String[] args) { //method
-        Animal animal1 = new Cow();
-        Animal animal2 = new Horse();
+        Animals animal1 = new Cow();
+        Animals animal2 = new Horse();
         animal1.say();
         animal2.say();
         animal1.say("test");
