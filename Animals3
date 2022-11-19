@@ -1,0 +1,19 @@
+public abstract class Animals {
+    String name;//null
+    public int age;//0
+    public static int count;
+
+    protected Animals(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+    protected Animals() {
+    }
+    public abstract void say();
+    public void say(String word) {
+        System.out.println(word);
+    }
+    public final int getCount() {
+        return count;
+    }
+}
